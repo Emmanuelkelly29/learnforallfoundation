@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Learn For All Foundation</title>
+    <meta name="description" content="Support Learn For All Foundation's mission to provide quality education to vulnerable children. Your donation makes a real difference.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-book"></i>
+                <span>Learn For All Foundation</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="programs.html" class="nav-link">Programs & Impact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="involved.html" class="nav-link">Get Involved</a>
+                </li>
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link active">Donate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">News & Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="faqs.html" class="nav-link">FAQs</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Donate</h1>
+            <p>Your generosity makes dreams possible. Every donation, no matter how small, has the power to change lives.</p>
+        </div>
+    </section>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Donation Impact -->
+            <div class="content-section text-center">
+                <h2>How Your Donation Helps</h2>
+                <p>With your help, we can expand scholarships, build community centers, and ensure children in rural areas never have to give up on their education.</p>
+                
+                <div class="impact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>$25</h3>
+                        <p>Provides school supplies for one child for a month</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>$50</h3>
+                        <p>Sponsors textbooks for 5 students</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h3>$100</h3>
+                        <p>Covers monthly tuition for one student</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>$500</h3>
+                        <p>Equips a learning center with computers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Form -->
+            <div class="content-section">
+                <h2>Make a Donation</h2>
+                
+                <div class="donation-form">
+                    <form id="donationForm">
+                        <!-- Donation Amount -->
+                        <div class="form-group">
+                            <label>Donation Amount</label>
+                            <div class="donation-amounts">
+                                <button type="button" class="amount-button" data-amount="25">$25</button>
+                                <button type="button" class="amount-button" data-amount="50">$50</button>
+                                <button type="button" class="amount-button" data-amount="100">$100</button>
+                                <button type="button" class="amount-button" data-amount="250">$250</button>
+                                <button type="button" class="amount-button" data-amount="500">$500</button>
+                                <button type="button" class="amount-button" data-amount="1000">$1000</button>
+                            </div>
+                            <div class="custom-amount">
+                                <label for="customAmount">Custom Amount ($)</label>
+                                <input type="number" id="customAmount" name="customAmount" min="1" placeholder="Enter amount">
+                            </div>
+                        </div>
+
+                        <!-- Donation Type -->
+                        <div class="form-group">
+                            <label>Donation Type</label>
+                            <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                                <label>
+                                    <input type="radio" name="donationType" value="one-time" checked>
+                                    One-time Donation
+                                </label>
+                                <label>
+                                    <input type="radio" name="donationType" value="monthly">
+                                    Monthly Donation
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Donor Information -->
+                        <h3>Donor Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="donorFirstName">First Name *</label>
+                                <input type="text" id="donorFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donorLastName">Last Name *</label>
+                                <input type="text" id="donorLastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="donorEmail">Email Address *</label>
+                                <input type="email" id="donorEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donorPhone">Phone Number</label>
+                                <input type="tel" id="donorPhone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="donorAddress">Address</label>
+                            <textarea id="donorAddress" name="address" rows="3"></textarea>
+                        </div>
+
+                        <!-- Dedication -->
+                        <div class="form-group">
+                            <label for="dedication">Dedication (Optional)</label>
+                            <textarea id="dedication" name="dedication" rows="3" placeholder="Dedicate this donation in honor or memory of someone special..."></textarea>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <h3>Payment Information</h3>
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="paypal" checked>
+                                    <i class="fab fa-paypal"></i> PayPal
+                                </label>
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="stripe">
+                                    <i class="fas fa-credit-card"></i> Credit Card
+                                </label>
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="flutterwave">
+                                    <i class="fas fa-mobile-alt"></i> Mobile Money
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Conditions -->
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="terms" name="terms" required>
+                                I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a> *
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                I would like to receive updates about Learn For All Foundation's work
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                            <i class="fas fa-heart"></i> Donate Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Donation Options -->
+            <div class="content-section">
+                <h2>Other Ways to Donate</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>Bank Transfer</h3>
+                        <p>Make a direct bank transfer to our foundation account.</p>
+                        <div class="bank-details">
+                            <p><strong>Account Name:</strong> Learn For All Foundation</p>
+                            <p><strong>Account Number:</strong> 1234567890</p>
+                            <p><strong>Bank:</strong> Ghana Commercial Bank</p>
+                            <p><strong>Swift Code:</strong> GHCBGHAC</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Money</h3>
+                        <p>Send your donation via mobile money services.</p>
+                        <div class="mobile-details">
+                            <p><strong>MTN Mobile Money:</strong> +233539427701</p>
+                            <p><strong>Vodafone Cash:</strong> +233539427701</p>
+                            <p><strong>AirtelTigo Money:</strong> +233539427701</p>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>In-Kind Donations</h3>
+                        <p>Donate books, school supplies, or other educational materials.</p>
+                        <p><strong>Items Needed:</strong></p>
+                        <ul style="text-align: left; margin-left: 1rem;">
+                            <li>Textbooks and workbooks</li>
+                            <li>School uniforms</li>
+                            <li>Writing materials</li>
+                            <li>Computers and tablets</li>
+                            <li>Educational games</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    </div>
+
+                    <div class="content-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Corporate Giving</h3>
+                        <p>Partner with us for large-scale impact through corporate donations.</p>
+                        <p><strong>Benefits:</strong></p>
+                        <ul style="text-align: left; margin-left: 1rem;">
+                            <li>Tax-deductible contributions</li>
+                            <li>Employee engagement programs</li>
+                            <li>Brand recognition</li>
+                            <li>Impact reporting</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transparency -->
+            <div class="content-section">
+                <h2>Transparency & Accountability</h2>
+                <p class="text-center mb-3">We believe in complete transparency about how your donations are used.</p>
+                
+                <div class="transparency-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div class="transparency-card">
+                        <h3>How We Use Donations</h3>
+                        <div class="usage-breakdown">
+                            <div class="usage-item">
+                                <span>Scholarships & Tuition</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="usage-item">
+                                <span>School Supplies</span>
+                                <span>20%</span>
+                            </div>
+                            <div class="usage-item">
+                                <span>Learning Centers</span>
+                                <span>15%</span>
+                            </div>
+                            <div class="usage-item">
+                                <span>Administrative</span>
+                                <span>5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transparency-card">
+                        <h3>Financial Reports</h3>
+                        <p>We publish annual financial reports showing exactly how donations are used.</p>
+                        <ul style="text-align: left;">
+                            <li><a href="#" target="_blank">2023 Annual Report</a></li>
+                            <li><a href="#" target="_blank">2022 Annual Report</a></li>
+                            <li><a href="#" target="_blank">Audited Financial Statements</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="transparency-card">
+                        <h3>Impact Reports</h3>
+                        <p>Regular updates on the impact of your donations.</p>
+                        <ul style="text-align: left;">
+                            <li><a href="#" target="_blank">Monthly Impact Updates</a></li>
+                            <li><a href="#" target="_blank">Success Stories</a></li>
+                            <li><a href="#" target="_blank">Program Evaluations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donor Recognition -->
+            <div class="content-section">
+                <h2>Donor Recognition</h2>
+                <p class="text-center mb-3">We recognize and appreciate all our donors who make our work possible.</p>
+                
+                <div class="recognition-levels" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div class="recognition-card">
+                        <div class="recognition-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Friends of Education</h3>
+                        <p>$25 - $99</p>
+                        <ul style="text-align: left;">
+                            <li>Thank you letter</li>
+                            <li>Newsletter subscription</li>
+                        </ul>
+                    </div>
+
+                    <div class="recognition-card">
+                        <div class="recognition-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Education Champions</h3>
+                        <p>$100 - $499</p>
+                        <ul style="text-align: left;">
+                            <li>All Friends benefits</li>
+                            <li>Impact report</li>
+                            <li>Certificate of appreciation</li>
+                        </ul>
+                    </div>
+
+                    <div class="recognition-card">
+                        <div class="recognition-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Education Leaders</h3>
+                        <p>$500 - $999</p>
+                        <ul style="text-align: left;">
+                            <li>All Champions benefits</li>
+                            <li>Donor wall recognition</li>
+                            <li>Annual report mention</li>
+                        </ul>
+                    </div>
+
+                    <div class="recognition-card">
+                        <div class="recognition-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Education Visionaries</h3>
+                        <p>$1000+</p>
+                        <ul style="text-align: left;">
+                            <li>All Leaders benefits</li>
+                            <li>Named scholarship opportunity</li>
+                            <li>Personal impact updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="content-section text-center">
+                <h2>Ready to Make a Difference?</h2>
+                <p>Your donation today can change a child's life forever. Join us in ensuring that every child has access to quality education.</p>
+                <div class="cta-buttons">
+                    <a href="#donationForm" class="btn btn-primary">Donate Now</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-book"></i>
+                        <span>Learn For All Foundation</span>
+                    </div>
+                    <p>Empowering vulnerable communities through quality education for all.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +233539427701</p>
+                        <p><i class="fas fa-envelope"></i> info@learnforallfoundation.org</p>
+                        <p><i class="fas fa-envelope"></i> emmanuelkelly29@gmail.com</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest projects and impact stories.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Learn For All Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>Live Support</h3>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chatbot-message bot-message">
+                    <p>Hello! How can I help you today?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Type your message...">
+                <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
